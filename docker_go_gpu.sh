@@ -17,5 +17,7 @@ docker run -it \
         -e N_COMPLETE=100 \
         -e EMBED=True \
         -e EMBED_BATCHSIZE=32768 \
-        --gpus all \
+        --security-opt seccomp=unconfined \
+        --device /dev/kfd \
+        --device /dev/dri \
         wikidata_datadump_textification
