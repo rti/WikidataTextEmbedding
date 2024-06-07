@@ -1,5 +1,5 @@
 # Use the official Python image from the Docker Hub
-FROM python:3.9-slim
+FROM rocm/pytorch-nightly:2024-06-04-rocm6.1
 
 # Upgrade the pip version to the most recent version
 RUN pip install --upgrade pip
@@ -12,7 +12,6 @@ COPY requirements.txt requirements.txt
 
 # Install the dependencies
 RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cu118
 #  torchvision torchaudio
 
 

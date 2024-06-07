@@ -1,5 +1,4 @@
 import bz2
-import dask.dataframe as dd
 import json
 import logging
 import os
