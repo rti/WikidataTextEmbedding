@@ -14,7 +14,7 @@ docker run -it \
         -v $(pwd)/sqlitedbs:/app/sqlitedbs \
         -v $HOME/.cache/huggingface/hub:/root/.cache/huggingface/hub \
         -e WIKIMEDIA_TOKEN=$WIKIMEDIA_TOKEN \
-        -e N_COMPLETE=100 \
+        -e N_COMPLETE=100000 \
         -e EMBED=True \
         -e EMBED_BATCHSIZE=32768 \
         --security-opt seccomp=unconfined \
