@@ -1,5 +1,11 @@
+set -x
+
 # Build the Docker image
 docker build -t wikidata_datadump_textification .
+
+mkdir -p $(pwd)/datadump
+mkdir -p $(pwd)/csvfiles
+mkdir -p $(pwd)/sqlitedbs
 
 # Run the Docker container with the environment variable and volume mounting
 docker run -it \
